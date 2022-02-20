@@ -1,5 +1,5 @@
-import { memo } from "react";
-import "../styles/globals.css";
+import { memo } from 'react';
+import '../styles/globals.css';
 
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />;
