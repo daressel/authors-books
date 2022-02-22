@@ -20,6 +20,8 @@ export const AuthorWrapper = styled.div`
   flex-direction: column;
   cursor: pointer;
   background-image: url('/images/authors_background.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
   background-size: 300px;
   border-radius: 10px;
   transition: all 0.2s;
