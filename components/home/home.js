@@ -1,8 +1,8 @@
-import React, { memo } from 'react';
+import React, { memo, useState } from 'react';
 import HomeLayout from './home.layout';
 
 const Home = () => {
-  const authors = [
+  const authorsInit = [
     { name: 'author1', books: 10 },
     { name: 'author2', books: 10 },
     { name: 'author3', books: 10 },
@@ -17,7 +17,14 @@ const Home = () => {
     { name: 'author12', books: 10 },
   ];
 
-  return <HomeLayout authors={authors} />;
+  const [authors, setAuthors] = useState(authorsInit);
+
+  const handleClickAuthor = (name) => {
+    const updateAuthors = authors.filter((author) => author.name != name);
+    setAuthors(updateAuthors);
+  };
+
+  return <HomeLayout authors={authors} handleClickAuthor={handleClickAuthor} />;
 };
 
 export default memo(Home);

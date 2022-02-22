@@ -18,11 +18,11 @@ export const AuthorWrapper = styled.div`
   align-items: center;
   justify-content: end;
   flex-direction: column;
+  border: 1px solid #606060;
   cursor: pointer;
   background-image: url('/images/authors_background.jpg');
-  background-repeat: no-repeat;
   background-position: center;
-  background-size: 300px;
+  background-size: 1150px;
   border-radius: 10px;
   transition: all 0.2s;
   flex-grow: 1;
