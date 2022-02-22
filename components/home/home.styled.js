@@ -16,14 +16,14 @@ export const AuthorWrapper = styled.div`
   margin: 10px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: end;
+  flex-direction: column;
   cursor: pointer;
   background-image: url('/images/authors_background.jpg');
   background-size: 300px;
   border-radius: 10px;
   transition: all 0.2s;
   flex-grow: 1;
-  opacity: 1;
   color: white;
   :hover {
     box-shadow: 0 0 5px rgb(46, 46, 46);
@@ -33,7 +33,20 @@ export const AuthorWrapper = styled.div`
 `;
 
 export const AuthorName = styled.span`
-  opacity: 1;
+  margin: 10px;
+  font-size: 24px;
+  &::first-letter {
+    text-transform: capitalize;
+  }
 `;
 
-export const AuthorBooksCount = styled.span``;
+export const AuthorBooksCount = styled.span`
+  margin: 10px;
+  font-size: 20px;
+`;
+
+export const AuthorInfo = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;

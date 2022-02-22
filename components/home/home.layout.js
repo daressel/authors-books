@@ -4,6 +4,7 @@ import {
   AuthorWrapper,
   AuthorName,
   AuthorBooksCount,
+  AuthorInfo,
 } from './home.styled';
 
 const HomeLayout = ({ authors }) => {
@@ -13,8 +14,10 @@ const HomeLayout = ({ authors }) => {
       {authors &&
         authors.map((author, index) => (
           <AuthorWrapper key={index}>
-            <AuthorName>{author.name}</AuthorName>
-            <AuthorBooksCount>{author.books}</AuthorBooksCount>
+            <AuthorInfo>
+              <AuthorName>{author.name}</AuthorName>
+              <AuthorBooksCount>{author.books}</AuthorBooksCount>
+            </AuthorInfo>
           </AuthorWrapper>
         ))}
     </HomeWrapper>
