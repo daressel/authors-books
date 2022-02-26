@@ -4,14 +4,13 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-image: url(../public/images/main_background.jpg);
+  background-size: 100vh;
 }
 
 body > div {
-  min-height: 100vh;
   display: flex;
   justify-content: center;
-  background-image: url(../public/images/main_background.jpg);
-  background-size: 100vh;
 }
 
 a {

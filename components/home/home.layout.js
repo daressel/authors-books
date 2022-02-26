@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React, { memo } from 'react';
 import {
   HomeWrapper,
@@ -13,15 +14,16 @@ const HomeLayout = ({ authors, handleClickAuthor }) => {
     <HomeWrapper>
       {authors &&
         authors.map((author, index) => (
-          <AuthorWrapper
-            key={index}
-            onClick={() => handleClickAuthor(author.name)}
-          >
-            <AuthorInfo>
-              <AuthorName>{author.name}</AuthorName>
-              <AuthorBooksCount>{author.books}</AuthorBooksCount>
-            </AuthorInfo>
-          </AuthorWrapper>
+          <Link href="/test/123" key={index}>
+            <AuthorWrapper
+            // onClick={() => handleClickAuthor(author.name)}
+            >
+              <AuthorInfo>
+                <AuthorName>{author.name}</AuthorName>
+                <AuthorBooksCount>{author.books}</AuthorBooksCount>
+              </AuthorInfo>
+            </AuthorWrapper>
+          </Link>
         ))}
     </HomeWrapper>
   );
