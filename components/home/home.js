@@ -2,29 +2,11 @@ import React, { memo, useState } from 'react';
 import HomeLayout from './home.layout';
 
 const Home = () => {
-  const authorsInit = [
-    { name: 'author1', books: 10 },
-    { name: 'author2', books: 10 },
-    { name: 'author3', books: 10 },
-    { name: 'author4', books: 10 },
-    { name: 'author5', books: 10 },
-    { name: 'author6', books: 10 },
-    { name: 'author7', books: 10 },
-    { name: 'author8', books: 10 },
-    { name: 'author9', books: 10 },
-    { name: 'author10', books: 10 },
-    { name: 'author11', books: 10 },
-    { name: 'author12', books: 10 },
-  ];
+  const mediasInit = Array(10).fill();
 
-  const [authors, setAuthors] = useState(authorsInit);
+  const [medias, setMedias] = useState(mediasInit);
 
-  const handleClickAuthor = (name) => {
-    const updateAuthors = authors.filter((author) => author.name != name);
-    setAuthors(updateAuthors);
-  };
-
-  return <HomeLayout authors={authors} handleClickAuthor={handleClickAuthor} />;
+  return <HomeLayout medias={medias} />;
 };
 
 export default memo(Home);
