@@ -8,11 +8,6 @@ body {
   background-size: 100vh;
 }
 
-body > div {
-  display: flex;
-  justify-content: center;
-}
-
 a {
   color: inherit;
   text-decoration: none;

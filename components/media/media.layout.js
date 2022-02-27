@@ -1,14 +1,15 @@
+import Link from 'next/link';
 import { memo } from 'react';
-import { MediaWrapper, GenreWrapper } from './media.styled';
+import { MediaWrapper, GenreWrapper, MediaTitle } from './media.styled';
 
-const MediaLayout = ({ genres }) => {
+const MediaLayout = ({ media, handleClickMedia }) => {
   return (
     <>
-      <MediaWrapper>
-        {genres?.map((genre, index) => (
-          <GenreWrapper key={index}>{genre}</GenreWrapper>
-        ))}
-      </MediaWrapper>
+      <Link href={`/anime/${media.id}`}>
+        <MediaWrapper onClick={handleClickMedia}>
+          <MediaTitle>{media.title.userPreferred}</MediaTitle>
+        </MediaWrapper>
+      </Link>
     </>
   );
 };

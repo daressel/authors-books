@@ -1,15 +1,16 @@
 import React, { memo } from 'react';
 import Media from '../media/media';
-import { HomeWrapper } from './home.styled';
+import { HomeWrapper, MainWrapper } from './home.styled';
 
 const HomeLayout = ({ medias }) => {
   return (
-    <HomeWrapper>
-      {medias &&
-        medias.map((media, index) => {
-          return <Media key={index} id={index} />;
+    <MainWrapper>
+      <HomeWrapper>
+        {medias.map((media, index) => {
+          return <Media key={index} media={media} />;
         })}
-    </HomeWrapper>
+      </HomeWrapper>
+    </MainWrapper>
   );
 };
 

@@ -25,7 +25,7 @@ export const MediaWrapper = styled.div`
   }
 `;
 
-export const MediaName = styled.span`
+export const MediaTitle = styled.span`
   margin: 10px;
   font-size: 24px;
   &::first-letter {
